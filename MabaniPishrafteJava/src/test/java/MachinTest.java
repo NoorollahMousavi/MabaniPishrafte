@@ -1,8 +1,9 @@
+import org.junit.jupiter.api.Test;
+
 public class MachinTest {
 
-    class Machin{
-
-        // Dade:
+    class Mashin {
+        // Dade
         boolean ayaMachinRoshanAst;
         boolean ayaDarMachinBazAst;
         double toul;
@@ -10,18 +11,35 @@ public class MachinTest {
         String mark;
 
 
-        //Tabe (methode) :
-        void roshan() {
-            System.out.println("Machin roshan ast");
+
+        // Tabe (Method)
+        void roshan(){
+            System.out.println("Masin Roshan Ast");
             ayaMachinRoshanAst = true;
         }
-        void khamoush() {
-            System.out.println("Machin Khamoush ast");
+
+        void khamosh(){
+            System.out.println("Masin Khamoush Ast");
             ayaMachinRoshanAst = false;
         }
-        void bazKardanDar(){
-            System.out.println("Dar Baz ast");
+
+        void bazkardaneDar(){
+            System.out.println("Dar Baz Ast");
             ayaDarMachinBazAst = true;
+        }
+
+        void bastanDar(){
+            System.out.println("Dar Baste shod");
+            ayaDarMachinBazAst = false;
+        }
+
+        void harekat(){
+            // Dar baste bashe va machin roshan bashad(rule)
+            if (!ayaDarMachinBazAst && ayaMachinRoshanAst){
+                System.out.println("Mashin dar Hale Haraket Ast");
+            } else {
+                System.out.println("Mashin Park ASt");
+            }
         }
     }
 }
